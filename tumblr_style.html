@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<!-- DEFAULT COLORS -->
+		<meta name="color:Background" content="#222" />
+		<meta name="color:Content Background" content="#fff" />
+		<meta name="color:Title" content="#666" />
+		<meta name="color:Description" content="#777" />
+		<meta name="color:Nav Links" content="#44A3E2" />
+		<meta name="color:Date" content="#ccc" />
+		<meta name="color:Post Title" content="#444" />
+		<meta name="color:Text" content="#555" />
+		<meta name="color:Inline Link" content="#111" />
+		<meta name="color:Quote" content="#444" />
+		<meta name="color:Quote Source" content="#666" />
+		<meta name="color:Link Post" content="#666" />
+		<meta name="color:Conversation Background 1" content="#f4f4f4" />
+		<meta name="color:Conversation Background 2" content="#e8e8e8" />
+		<meta name="color:Conversation Border" content="#555" />
+		<meta name="color:Conversation Text" content="#000" />
+		<meta name="color:Caption" content="#888" />
+		<meta name="color:Content Decoration" content="#aaa" />
+		<meta name="color:Footer" content="#eee" /><!-- END DEFAULT COLORS -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="icon" href="{Favicon}" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/actsasfu" />
+		<title>
+			{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}
+		</title>
+		<style type="text/css">
+/*<![CDATA[*/
+		body{font-family:helvetica,arial,sans-serif;margin:0px;background:#fff;}
+		a{color:#333;}
+		h1{font-size:30px;text-transform:uppercase;}
+		h1 a{text-decoration:none;color:black;}
+		h1 span{color:red;}
+
+		#wrapper {width:900px;font-size:13px;margin:auto;}
+
+		#container{width:600px;font-size:13px;float:left;}
+
+		#right {
+			width:250px;
+			float:left;
+			margin-left: 20px;
+
+			}
+
+		#menu{font-size:11px;}
+		#menu ul{list-style:none;padding:0px;margin:0px;}
+		#menu ul li{margin:0px;padding:0px;}
+		#menu ul li a{float:right;background:#000;color:#fff;padding:6px;text-decoration:none;margin-right:1px;border:1px solid black;}
+		#menu ul li a:hover{color:#000;background:#fff;}
+
+		.date{float:left;font-size:48px;font-weight:bold;text-align:center;width:50px;padding:10px;background:#000;color:#fff;}
+		.date span{font-size:23px;text-transform:uppercase;}
+		.date a{color:#fff;text-decoration:none;}
+		.date a:hover{color:#eee;}
+
+		.post{float:left;width:510px;margin-left:20px;line-height:18px;font-size:14px;position:relative;}
+		.post h2{margin:4px 0px 4px 0px;padding:0px;}
+
+		div.post .tag{display:none;padding:1px;font-size:12px;position:absolute;bottom:0px;right:0px;text-decoration:none;}
+		div.post:hover .tag{display:inline;}
+
+		.photo,.video{padding:5px;background:#eee;}
+		.photo img{border:0px;}
+
+		.audio{padding:5px;}
+
+		.quote{font-size:15px;}
+		.quote span{float:left;font-family:monaco,georgia;font-size:48px;}
+		.author{font-size:14px;font-weight:bold;}
+
+		.link span{font-size:21px;}
+		.link a{padding:5px;font-size:16px;color:#000;font-weight:bold;}
+		.description{font-size:14px;font-weight:bold;}
+
+
+		.conversation{list-style:none;padding:0px;margin:0px;}
+		.conversation li{padding:3px 1px 3px 1px;}
+		.conversation .even{background:#eee;}
+		.conversation .odd{background:#ccc;}
+		.label{font-weight:bold;}
+
+		.filler{float:left;font-size:48px;font-weight:bold;text-align:center;width:50px;padding:10px;}
+		#paginate{float:left;padding:10px;margin-left:10px;}
+		#paginate a{color:#fff;background:#000;padding:5px;margin-right:2px;text-decoration:none;font-size:14px;border:1px solid black;}
+		#paginate a span{font-weight:bold;color:#ff0000;}
+		#paginate a:hover{background:#fff;color:#000;}
+
+		#footer{background:#000;color:#fff;padding:10px;font-size:14px;line-height:18px;}
+		#footer a{color:#fff;}
+		.clear{clear:both;padding-bottom:10px;}
+
+		.elsewhere h2 {
+			float:right;
+		}
+
+		.elsewhere ul {
+			margin:0;
+			padding:0;
+			list-style-type: none;
+			font-size: 18%;
+			line-height:20px;
+			list-style: none inside;
+			width: 100%;
+		}
+
+		.elsewhere li {
+			list-style: none inside;
+		}
+
+		.elsewhere a {
+			float:right;
+			display:block;
+			font-family:georgia,serif;
+			color: #fff;
+			font-size:22px;
+			padding:10px 15px;
+			text-decoration:none;
+			clear:both;
+		}
+
+		.facebook {
+			background-color: #3b5998;
+		}
+
+		.delicious {
+			background-color: #0000ff;
+		}
+
+		.flickr {
+			background-color: #ff0084;
+		}
+
+		.friendfeed {
+			background-color: #437ec7;
+		}
+
+		.hypemachine {
+			background-color: #85c441;
+		}
+
+		.lastfm {
+			background-color: #d01f3c;
+		}
+
+		.twitter {
+			background-color: #2bcfe4;
+		}
+
+		.linkedin {
+			background-color: #0074a6;
+		}
+
+		.brightkite {
+			background-color: #B8D42D;
+		}
+
+		.fireeagle_badge_main_container {
+			font-size:70%;
+			text-align:right;
+			float:right;
+		}
+
+		.fireeagle_data_list {
+			list-style-type: none;
+		}
+
+		.fireeagle_data_entry {
+			list-style: none inside;
+		}
+
+		.fireeagle_logo {
+			float:right;
+			width:220px;
+			height:46px;
+			background-image: url(http://fireeagle.yahoo.net/images/badge/fe_logo_small.png);
+		}
+
+		.dopplr-badge {
+			border: 0px;
+			float:right;
+			text-align:right;
+		}
+
+		.permalink  {
+			color:#444444;
+			font-size:12px;
+			border-bottom:1px dotted #222222;
+			text-decoration:none;
+		}
+
+		.following h2 {
+			text-align: right;
+			float: right;
+			clear:both;
+		}
+
+		.following {
+			text-align: right;
+			float: right;
+		}
+		
+		#search {
+			padding-top:2px;
+			float:right;
+		}
+		
+		#search .text_input {
+			background-color:#DEDEDE;
+			border:1px inset #DEDEDE;
+			color:#000;
+			font-size:12px;
+			outline-color:-moz-use-text-color;
+			outline-style:none;
+			outline-width:0;
+			padding:3px;
+			width:119px;
+		}
+		
+		#search .search_button {
+			background-color:#91BF49;
+			border:1px outset #76A437;
+			color:#fff;
+			font-size:11px;
+			outline-color:-moz-use-text-color;
+			outline-style:none;
+			outline-width:0;
+			padding:3px;
+			text-align:center;
+			width:119px;
+		}
+		
+
+		/*]]>*/
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="container">
+				<div id="menu">
+					<ul>
+						<li>
+							<a href="http://feeds.feedburner.com/actsasfu">subscribe</a>
+						</li>
+						<li>
+							<a href="/archive">archives</a>
+						</li>
+					</ul>
+				</div>
+				<div id="top">
+					<h1>
+						<a href="/">ACSTAS</a><span>FU</span>
+					</h1>
+				</div>{block:Posts} {block:NewDayDate}
+				<div class="date">
+					<a href="{Permalink}">{DayOfMonthWithZero}</a> <span>{ShortMonth}</span>
+				</div>{/block:NewDayDate} {block:SameDayDate}
+				<div class="date">
+					<a href="{Permalink}">+</a>
+				</div>{/block:SameDayDate}
+				<div class="post">
+					<a href="{Permalink}" class="tag">∞</a> {block:Regular} {block:Title}
+					<h2>
+						<a href="{Permalink}">{Title}</a>
+					</h2>{/block:Title} {Body} {/block:Regular} {block:Photo}
+					<div class="photo">
+						{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag} {block:Caption}
+						<p class="description">
+							{Caption}
+						</p>{/block:Caption}
+					</div>{/block:Photo} {block:Quote}
+					<p class="quote">
+						<span>“</span>{Quote}
+					</p>{block:Source}
+					<p class="author">
+						— {Source}
+					</p>{/block:Source} {/block:Quote} {block:Link}
+					<p class="link">
+						<span>∞</span> <a href="{URL}" class="link">{Name}</a>
+					</p>{block:Description}
+					<p class="description">
+						{Description}
+					</p>{/block:Description} {/block:Link} {block:Conversation} {block:Title}
+					<h2>
+						<a href="{Permalink}">{Title}</a>
+					</h2>{/block:Title}
+					<ul class="conversation">
+						<li style="list-style: none">{block:Lines}
+						</li>
+						<li class="{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
+						</li>
+						<li style="list-style: none">{/block:Lines}
+						</li>
+					</ul>{/block:Conversation} {block:Audio}
+					<div class="audio">
+						{AudioPlayerBlack}
+					</div>{block:Caption}
+					<p class="description">
+						{Caption}
+					</p>
+					{/block:Caption} {/block:Audio} {block:Video}
+					<div class="video">
+						{Video-500} {block:Caption}
+						<p class="description">
+							{Caption}
+						</p>{/block:Caption}
+					</div>{/block:Video}
+					<div><a class="permalink" href="{Permalink}#disqus_thread">Comments (View)</a></div>
+				</div>
+				<div class="clear">
+				</div>{/block:Posts}
+
+				{block:Permalink}
+				<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+				<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/actsasfu/embed.js"></script>
+				<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+				{/block:Permalink}
+				<script type="text/javascript">
+				//<![CDATA[
+				(function() {
+						var links = document.getElementsByTagName('a');
+						var query = '?';
+						for(var i = 0; i < links.length; i++) {
+							if(links[i].href.indexOf('#disqus_thread') >= 0) {
+								query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+							}
+						}
+						document.write('<script type="text/javascript" src="http://disqus.com/forums/actsasfu/get_num_replies.js' + query + '"></' + 'script>');
+					})();
+				//]]>
+				</script>
+
+				<div class="filler"></div>
+				<div id="paginate">
+					{block:PreviousPage}<a href="{PreviousPage}"><span>←</span> Previous</a>{/block:PreviousPage} {block:NextPage}<a href="{NextPage}">Next <span>→</span></a>{/block:NextPage}
+				</div>
+			</div>
+			<div id="right">
+				
+				<div id="search">
+					<form action="/search" method="get">
+					    <input type="text" class="text_input" name="q" value="{SearchQuery}"/>
+					    <input type="submit" class="search_button" value="Search"/>
+					</form>
+				</div>
+				<div class="clear"></div>
+				
+				<div>
+					<div id="dopplr-blog-badge-for-armanddp"><script type="text/javascript" src="http://www.dopplr.com/blogbadge/script/c22cdea7798b0ebb8afca2340010ce4e?div-id=dopplr-blog-badge-for-armanddp"></script></div>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="elsewhere">
+					<h2>
+						rel="me" links
+					</h2>
+					<ul>
+						<li>
+							<a class="twitter" href="http://twitter.com/armanddp">Twitter</a>
+						</li>
+						<li>
+							<a class="delicious" href="http://delicious.com/armanddp">Delicious</a>
+						</li>
+						<li>
+							<a class="brightkite" href="http://brightkite.com/people/armanddp">Brightkite</a>
+						</li>
+						<li>
+							<a class="linkedin" href="http://www.linkedin.com/in/armanddp">LinkedIn</a>
+						</li>
+						<li>
+							<a class="lastfm" href="http://www.last.fm/user/armanddp">Lastfm</a>
+						</li>
+						<li>
+							<a class="facebook" href="http://www.new.facebook.com/profile.php?id=579040750">Facebook</a>
+						</li>
+
+						<li>
+							<a class="hypemachine" href="http://hypem.com/armanddp">Hypemachine</a>
+						</li>
+						<li>
+							<a class="friendfeed" href="http://friendfeed.com/armanddp">Friendfeed</a>
+						</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<div>
+					<span class="fireeagle_logo">&nbsp;</span>
+					<div class="fireeagle_badge_main_container"><div id="fireeagle_badge" class="fireeagle_badge_data_container"><br /></div><script type="text/javascript" src="http://www.txtst.com/fireeagle_badge/fireeagle_badge.php?k=9mzqw47nbt83vk2x&timezone=Pacific+Standard+Time"></script></div>
+				</div>
+				<div class="clear"></div>
+				{block:Following}
+
+				<div class="following">
+					<h2>Following</h2>
+					<div class="clear"></div>
+					<div>
+				        {block:Followed}
+				                <a href="{FollowedURL}"><img src="{FollowedPortraitURL-40}" alt="{FollowedName}" class="following"/>
+				                </a>
+				        {/block:Followed}
+					</div>
+				</div>
+					{/block:Following}
+
+			</div>
+			<div class="clear"></div>
+			<div id="footer">
+				<h3>
+					About
+				</h3>{Description}
+				<p>
+					This theme was designed by <a href="http://pixelspread.com">pixelspread</a>. 
+				</p>
+			</div>
+		</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-615452-4");
+pageTracker._trackPageview();
+</script>
+	</body>
+</html>
+</body>
+</html>
